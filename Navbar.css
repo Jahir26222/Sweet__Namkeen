@@ -13,6 +13,7 @@
 html,body{
     height: 100%;
     width: 100%;
+    background-color: #9D0910;
 }
 
 .header {
@@ -208,4 +209,108 @@ html,body{
 
 .dropdown:hover .dropdown-menu2 {
     display: block;
+}
+
+.header .menu-bar i{
+    display: none;
+}
+
+.header .nav-link #close-btn{
+    display: none;
+}
+
+
+
+@media(max-width:1120px) {
+
+    
+    .header .nav-link
+    {
+        display: none;
+    }
+    
+    .header
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .header .logo{
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .header .menu-bar
+    {
+        position: absolute;
+        left: 0;
+        top: 12;
+        padding-left: 15px;
+    }
+
+    .header .menu-bar i{
+        display: block;
+        font-size: 30px;
+    }
+
+    .header .icon{
+        position: absolute;
+        right: 0;
+        top: 12;
+    }
+
+    .header #nav{
+        display: none;
+        
+    }
+    .header .nav-link
+    {   
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        line-height: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        
+        gap: 0.001;
+        padding-left: 30px;
+        justify-content: center;
+        width: 250px;
+        height: 350px;
+        background-color: white;
+        
+
+    }
+     .header #menu-btn{
+        color: #9D0910;
+        
+     }
+
+    .header .dropdown-menu{
+        height: 120px;
+        line-height: 10px;
+    }
+
+    .header .dropdown-menu2{
+        height: 70px;
+        max-width: 200px;
+        line-height: 9px;
+    }
+    .header .nav-link a{
+        font-size: 17px;
+    }
+
+    .header .dropdown #caret-down{
+       position: absolute;
+       right: 0;
+       margin-right: 12px;
+       top:-10px ;
+    }
+    
+    .header .nav-link a + .dropdown-menu a:hover{
+        transform: scale(0.01);
+    }
 }
