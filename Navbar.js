@@ -1,8 +1,31 @@
-import React from 'react'
 import './Navbar.css'
 import { NavLink } from 'react-router-dom'
-import img1 from './assets/logo.png'
+import img1 from "../assets/logo.png"
+import { useState } from 'react'
 const Navbar = () => {
+
+    const [menuName, setMenuName] =  useState('fa-solid fa-bars');
+    const Display=()=>{
+       
+        if(menuName === 'fa-solid fa-bars')
+        {
+            let menu = document.querySelector("#nav");
+            menu.style.display ="flex";
+            setMenuName("fa-solid fa-xmark")
+        }
+        else{
+            let menu = document.querySelector("#nav");
+            menu.style.display ="none";
+            setMenuName("fa-solid fa-bars")
+            
+        }
+
+    }
+
+    const Hide=()=>{
+       let menu = document.querySelector("#nav");
+       menu.style.display = "none"
+    }
   return (
   
     <>
@@ -10,8 +33,10 @@ const Navbar = () => {
                 <div className="logo">
                     <img src={img1} alt="logo"/>
                 </div>
-    
-                <ul className="nav-link">
+              <div className="menu-bar">
+              <i className={menuName} id="menu-btn"onClick={Display}></i>
+              </div>
+                <ul className="nav-link"  id="nav">
                     <NavLink to="/">Home</NavLink>
                     <li className="dropdown">
                         <NavLink to="/shop" className="drop-btn">Shop<i className="fa-solid fa-angle-down" id="caret-down"></i></NavLink>
