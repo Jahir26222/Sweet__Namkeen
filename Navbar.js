@@ -62,9 +62,9 @@ const Navbar = () => {
                     <NavLink to="/contact">Contact us</NavLink>
                 </ul>
                 <div className="icon">
-                    <a><i className="fa-solid fa-magnifying-glass"></i></a>
+                    <a><i className="fa-solid fa-magnifying-glass" ></i></a>
                     <a><i className="fa-solid fa-bag-shopping"></i></a>
-                    <a><i className="fa-regular fa-user"></i></a>
+                    <a><i className="fa-regular fa-user" id="user"></i></a>
                 </div>
     
             </header>
