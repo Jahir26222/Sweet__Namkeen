@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
 
 .header .nav-link .active{
     color: #9D0910;
@@ -221,7 +217,7 @@ html,body{
 
 
 
-@media(max-width:1120px) {
+@media(max-width:1178px) {
 
     
     .header .nav-link
@@ -267,6 +263,7 @@ html,body{
     }
     .header .nav-link
     {   
+        z-index:999;
         margin-left: 0px;
         display: flex;
         flex-direction: column;
@@ -274,7 +271,6 @@ html,body{
         position: absolute;
         top: 100%;
         left: 0;
-        
         gap: 0.001;
         padding-left: 30px;
         justify-content: center;
@@ -296,8 +292,8 @@ html,body{
 
     .header .dropdown-menu2{
         height: 70px;
-        max-width: 200px;
-        line-height: 9px;
+        max-width: 210px;
+        line-height: 10px;
     }
     .header .nav-link a{
         font-size: 17px;
@@ -310,7 +306,26 @@ html,body{
        top:-10px ;
     }
     
-    .header .nav-link a + .dropdown-menu a:hover{
+    /* .header .nav-link a + .dropdown-menu a:hover{
         transform: scale(0.01);
+    } */
+}
+
+@media (max-width:580px) {
+    .header .icon #user{
+        display: none;
+    }
+
+    .header .icon{
+        margin-left: 60px;
+        padding-right: 0;
+    }
+    
+    .header .logo {
+        height: 3rem;
+        width: 9rem;
+        position: relative;
+        margin-left: 3px;
+        left: -12px;
     }
 }
